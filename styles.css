@@ -1,0 +1,185 @@
+/* Golbal */
+* {box-sizing: border-box;margin: 0;padding: 0;}
+
+ul {
+    list-style: none; /*เอาจุดออก*/
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+body {
+    max-width: 1200px;
+    margin: auto;
+    background-color: lightblue;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Header */
+header .container {
+    justify-content: space-between;
+}
+
+header {
+    background-color: violet;
+    color: whitesmoke;
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 3px solid saddlebrown;
+}
+
+header nav {
+    display: flex;
+    align-items: flex-end;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+}
+
+header a {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px;
+    color: inherit;
+}
+
+header a:hover {
+    color: slateblue;
+    font-weight: 800;
+}
+
+header span {
+    color: blueviolet;
+}
+
+header .current {
+    background-color: whitesmoke;
+    color: blueviolet;
+}
+
+.showcase {
+    min-height: 400px;
+    background-image:url("https://picsum.photos/id/2/1500/500/?blur=4") ;
+    background-size: cover;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+}    
+
+
+.showcase .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.showcase p {
+    color: blueviolet;
+}
+.showcase h1 {
+    font-size: 5vw;
+}
+.newsletter {
+    /* max-height: 100px; */
+    background-color: skyblue;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+}
+
+.newsletter .container {
+    justify-content: space-between;
+}
+
+.newsletter h1 {
+    color: coral;
+}
+
+.newsletter form button {
+    padding: 4px 8px;
+    font-size: 20px;
+    background-color: coral;
+    border: none;
+    border-radius: 4px;
+    color: whitesmoke;
+}
+
+.newsletter input[type=email] {
+    width: 250px;
+    font-size: 20px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.5;
+}
+
+.newsletter button:hover {
+    transform: scale(1.1);
+}
+.boxes {
+    margin-top: 50px;
+}
+.boxes .container {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.boxes img {
+    height: 150px;
+}
+
+.boxes .box {
+    text-align: center;
+    padding: 20px;
+}
+
+/* footer */
+body footer {
+    min-height: 60px;
+    background-color: skyblue;
+    color: whitesmoke;
+    /* align-items: center; */
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    /* position: absolute; */
+    bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+    }
+    body header .container {
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .newsletter .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input[type=email] {
+        width: 100%;
+    }
+}
